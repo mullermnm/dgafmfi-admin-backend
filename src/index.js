@@ -5,7 +5,7 @@ const app = require('./app');
 const User = require('./models/user.model');
 
 const PORT = process.env.PORT || ServerConfig.PORT;
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/dgaf_admin';
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://mongodb:27017/dgaf_admin';
 
 // Admin user data
 const adminUser = {
