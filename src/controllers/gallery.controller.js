@@ -205,7 +205,7 @@ exports.deleteGallery = async (req, res) => {
     }
 
     await Promise.all(gallery.images.map(image => deleteFile(`uploads/galleries/${image.publicId}`)));
-    await gallery.remove();
+    await Gallery.deleteOne({ _id: req.params.id });
     res.status(StatusCodes.OK).json({
       message: 'Gallery deleted successfully'
     });

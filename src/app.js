@@ -28,7 +28,7 @@ const dashboardRoutes = require('./routes/dashboard.routes');
 app.use('/api/auth', authRoutes);
 app.use('/api/news', newsRoutes);
 app.use('/api/events', eventRoutes);
-app.use('/api/gallery', galleryRoutes);
+app.use('/api/galleries', galleryRoutes);
 app.use('/api/dashboard', dashboardRoutes);
 
 // Setup error handling middleware (after routes)

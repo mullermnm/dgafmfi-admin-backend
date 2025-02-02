@@ -129,7 +129,7 @@ exports.deleteNews = async (req, res) => {
       await deleteFile(`uploads/news/${news.image.publicId}`);
     }
 
-    await news.remove();
+    await News.deleteOne({ _id: req.params.id });
     res.status(StatusCodes.OK).json({
       message: 'News deleted successfully'
     });

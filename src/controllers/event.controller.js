@@ -131,7 +131,7 @@ exports.deleteEvent = async (req, res) => {
       await deleteFile(`uploads/events/${event.media.publicId}`);
     }
 
-    await event.remove();
+    await Event.deleteOne({ _id: req.params.id });
     res.status(StatusCodes.OK).json({
       message: 'Event deleted successfully'
     });

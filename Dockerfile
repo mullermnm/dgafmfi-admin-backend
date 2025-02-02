@@ -8,6 +8,12 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 3000
+# Create uploads directory
+RUN mkdir -p /app/uploads && \
+    mkdir -p /app/uploads/news && \
+    mkdir -p /app/uploads/events && \
+    mkdir -p /app/uploads/gallery
+
+EXPOSE 5000
 
 CMD ["npm", "start"]
