@@ -34,7 +34,6 @@ exports.createGallery = async (req, res) => {
 exports.getAllGalleries = async (req, res) => {
   try {
     const galleries = await Gallery.find()
-      .populate('author', 'username')
       .sort('-createdAt');
     res.status(StatusCodes.OK).json(galleries);
   } catch (error) {
