@@ -18,6 +18,13 @@ exports.newsValidation = [
   validate
 ];
 
+exports.blogValidation = [
+  body('title').trim().isLength({ min: 3 }).withMessage('Title must be atleast 3 characters'),
+  body('description').trim().isLength({ min: 10 }).withMessage('Description must be atleast 10 characters'),
+  body('status').optional().isIn(['draft', 'published']).withMessage('Invalid status'),
+  validate
+];
+
 exports.galleryValidation = [
   body('title').trim().isLength({ min: 3 }).withMessage('Title must be atleast 3 characters'),
   body('description').trim().isLength({ min: 10, max: 500 }).withMessage('Description must be between 10 and 500 characters'),

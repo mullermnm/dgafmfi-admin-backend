@@ -2,6 +2,7 @@ const express = require('express');
 
 const authRoutes = require('../routes/auth.routes');
 const newsRoutes = require('../routes/news.routes');
+const blogRoutes = require('../routes/blogs.routes');
 const galleryRoutes = require('../routes/gallery.routes');
 const eventRoutes = require('../routes/event.routes');
 const statsRoutes = require('../routes/stats.routes');
@@ -22,6 +23,7 @@ const setupRoutes = (app) => {
   }, authRoutes);
 
   app.use('/api/news', newsRoutes);
+  app.use('/api/blogs', blogRoutes);
   app.use('/api/galleries', galleryRoutes);
   app.use('/api/events', eventRoutes);
   app.use('/api/stats', statsRoutes);
