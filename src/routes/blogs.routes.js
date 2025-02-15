@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const {
   createBlog,
-  getAllBlog,
+  getAllBlogs,
   getBlogById,
   updateBlog,
   deleteBlog
@@ -12,7 +12,7 @@ const { uploadImage } = require('../middleware/upload.middleware');
 const { blogValidation } = require('../middleware/validator.middleware');
 
 router.route('/')
-  .get(getAllBlog)
+  .get(getAllBlogs)
   .post(protect, authorize('admin'), uploadImage.single('image'), blogValidation, createBlog);
 
 router.route('/:id')

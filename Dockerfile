@@ -11,6 +11,7 @@ COPY . .
 # Create uploads directory
 RUN mkdir -p /app/uploads && \
     mkdir -p /app/uploads/news && \
+    mkdir -p /app/uploads/blogs && \
     mkdir -p /app/uploads/events && \
     mkdir -p /app/uploads/gallery
 
