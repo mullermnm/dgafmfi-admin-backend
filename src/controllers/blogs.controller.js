@@ -13,7 +13,7 @@ exports.createBlog = async (req, res) => {
       } : undefined
     });
 
-    await Blog.save();
+    await blog.save();
     res.status(StatusCodes.CREATED).json(blog);
   } catch (error) {
     if (req.file) {
