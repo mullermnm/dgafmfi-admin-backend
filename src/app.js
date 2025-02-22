@@ -25,6 +25,7 @@ const blogsRoutes = require('./routes/blogs.routes');
 const eventRoutes = require('./routes/event.routes');
 const galleryRoutes = require('./routes/gallery.routes');
 const dashboardRoutes = require('./routes/dashboard.routes');
+const loanConfigRoutes = require('./routes/loan-config.routes');
 
 app.use('/api/auth', authRoutes);
 app.use('/api/news', newsRoutes);
@@ -32,6 +33,7 @@ app.use('/api/blogs', blogsRoutes);
 app.use('/api/events', eventRoutes);
 app.use('/api/galleries', galleryRoutes);
 app.use('/api/dashboard', dashboardRoutes);
+app.use('/api/loan-config', loanConfigRoutes);
 
 // Setup error handling middleware (after routes)
 setupErrorHandlers();

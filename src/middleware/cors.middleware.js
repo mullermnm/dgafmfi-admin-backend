@@ -6,6 +6,9 @@ const allowedOrigins = [
   'https://www.digaf.et',
   'https://digaf.et:5100',
   'https://196.188.187.243:5100',
+  'http://localhost:5100',
+  'http://localhost:5173'
+
 ];
 
 const corsMiddleware = cors({
